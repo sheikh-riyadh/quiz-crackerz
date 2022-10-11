@@ -1,11 +1,10 @@
-import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Topics from '../Topics/Topics';
 const Home = () => {
 
-
-    const { data } = useLoaderData();
     /* console.log(data) */
+    const topicsData = useLoaderData()
+    const { data } = topicsData;
 
     return (
         <div className='grid grid-cols-2 p-12 gap-10'>

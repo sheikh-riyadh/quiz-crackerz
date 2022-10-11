@@ -9,7 +9,13 @@ const Quiz = () => {
 
     const correctAnswerHandler = (answer) => {
         const newCorrectAnswers = [...correctAnswers, answer]
-        setCorrectAnswers(newCorrectAnswers)
+        /* Checking if answer already exisit or not */
+        if (correctAnswers.includes(answer)) {
+            return
+        } else {
+
+            setCorrectAnswers(newCorrectAnswers)
+        }
     }
     const quizData = useLoaderData()
     const { data } = quizData;

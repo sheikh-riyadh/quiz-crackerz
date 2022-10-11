@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Options from '../Options/Options';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Question = ({ quizQuestion }) => {
@@ -15,16 +17,15 @@ const Question = ({ quizQuestion }) => {
         const { correctAnswer } = answer;
         /* const newCorrectAnswer = correctAnswer.replace(/\s+/g, ' ').trim(); */
 
-        console.log(answer)
         if (selectedAnswer === correctAnswer) {
-            alert('Correct answer')
+            toast.success('Answer is correct', { position: 'top-center', autoClose: 2000 })
         } else {
-            alert('Wrong answer')
+            toast.error('Wrong answer', { position: 'top-center', autoClose: 2000 })
         }
     }
     return (
-        <div className='mt-20 shadow-2xl rounded-xl p-10 text-center' onClick={findAnswer}>
-            <p className='pb-8'>{question}</p>
+        <div className='shadow-2xl rounded-xl p-10 text-center' onClick={findAnswer}>
+            <p className='pb-8 font-bold text-xl hover:'>{question}</p>
             <div className='grid grid-cols-2 gap-5 items-center'>
                 {
                     options.map((option, indexID) => <Options
@@ -32,6 +33,7 @@ const Question = ({ quizQuestion }) => {
                         option={option}
                     ></Options>)
                 }
+                <ToastContainer />
             </div>
         </div>
     );

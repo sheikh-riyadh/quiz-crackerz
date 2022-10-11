@@ -17,7 +17,7 @@ const Topics = ({ topic }) => {
             <div className='flex justify-between items-center pt-5 text-[#222] font-bold text-lg'>
                 <h4>{name}</h4>
                 <button onClick={() => topicQuestionHandler(id)} className="bg-teal-500 hover:bg-teal-400 text-white font-bold py-2 px-4 rounded">
-                    Button
+                    Let's try
                 </button>
             </div>
         </div>

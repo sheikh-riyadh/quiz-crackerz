@@ -21,7 +21,7 @@ const Quiz = () => {
     const { data } = quizData;
     const { questions } = data;
     return (
-        <div className='grid grid-cols-6 mt-20'>
+        <div className='grid grid-cols-1 xl:grid-cols-6 mt-20'>
             <div className='col-span-4'>
                 {
                     questions.map(quizQuestion => <Question key={quizQuestion.id} quizQuestion={quizQuestion}

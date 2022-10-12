@@ -57,12 +57,12 @@ const Question = ({ quizQuestion, correctAnswerHandler }) => {
         }
     }
     return (
-        <div className='shadow-2xl rounded-xl mb-12 p-10 text-center'>
-            <div className='flex justify-between'>
+        <div className='shadow-2xl rounded-xl mb-12 p-3 md:p-7 lx:p-10 text-center'>
+            <div className='flex flex-row justify-between'>
                 <p className='pb-8 font-bold text-xl hover:'>{question}</p>
                 <EyeIcon onClick={() => answerHandler(false)} className="h-6 w-6 text-blue-500 cursor-pointer" />
             </div>
-            <div className='grid grid-cols-2 gap-5 items-center'>
+            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-5 items-center'>
                 {
                     options.map((option, indexID) => <Options
                         key={indexID}

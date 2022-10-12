@@ -37,7 +37,8 @@ function App() {
         },
         {
           path: '/blogs',
-          element: <Blogs></Blogs>
+          element: <Blogs></Blogs>,
+          loader: () => fetch('blogs.json')
         },
         {
           path: '/quiz/:quizID',
@@ -54,7 +55,9 @@ function App() {
   return (
     <div className='main-container'>
       <RouterProvider router={router}></RouterProvider>
-    </div>
+      {/* <Blogs question={"What the purpose of react router?"} answer={"ReactJS Router is mainly used for developing Single Page Web Applications. React Router is used to define multiple routes in the application. When a user types a specific URL into the browser, and if this URL path matches any 'route' inside the router file, the user will be redirected to that particular route."}>
+      </Blogs> */}
+    </div >
   );
 }
 

@@ -1,4 +1,4 @@
-import { AreaChart, XAxis, CartesianGrid, Tooltip, Area, YAxis, PieChart, Pie } from 'recharts';
+import { Tooltip, PieChart, Pie } from 'recharts';
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 

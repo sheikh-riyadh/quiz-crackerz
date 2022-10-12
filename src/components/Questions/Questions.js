@@ -6,6 +6,8 @@ const Quiz = () => {
 
     const [correctAnswers, setCorrectAnswers] = useState([])
 
+    console.log(correctAnswers)
+
 
     const correctAnswerHandler = (answer) => {
         const newCorrectAnswers = [...correctAnswers, answer]
